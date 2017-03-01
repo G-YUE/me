@@ -1,0 +1,12 @@
+#coding:utf-8
+def mov(n,x,y,z):
+  if n == 1:
+    print x,'--->',z
+  else:
+    mov(n-1,x,z,y)
+    print x,'--->',z
+    mov(n-1,y,x,z)
+
+
+n = int(raw_input('请输入汉诺塔的层数:'))
+mov(n,'x','y','z')
